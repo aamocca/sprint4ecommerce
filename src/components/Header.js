@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <>
-      <p>Header</p>
+      <p>MiEcommerce</p>
     </>
   );
 };
