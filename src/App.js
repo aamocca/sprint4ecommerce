@@ -1,13 +1,10 @@
-import Main from "./components/Main";
-import Header from "./components/Header";
+// import Main from "./components/Main";
+// import Header from "./components/Header";
 import MenuAdmin from "./components/MenuAdmin";
-import { useState } from 'react'
-import Navbar from "./components/Navbar";
-import "./App.css"
-import { GiHamburgerMenu } from 'react-icons/gi'
+import "./App.css";
+import "./header.css";
 
 function App() {
-  const [showNav, setShowNav] = useState(false)
   return (
     // <div className="App">
     //   {/* <Header />
@@ -16,12 +13,7 @@ function App() {
     //   <MenuAdmin />
     // </div>
     <>
-    <div className="App">
-      <header>
-        <GiHamburgerMenu onClick={() => setShowNav(!showNav)}/>
-      </header>
-      <Navbar show={showNav} />
-    </div>
+      <MenuAdmin />
     </>
   );
 }

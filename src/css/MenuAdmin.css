@@ -1,4 +1,4 @@
-html{
+html {
   width: 100%;
   height: 100%;
 }
@@ -26,6 +26,12 @@ html{
   width: 100%;
   border: solid 2px black;
 }
-.menus{
+.menus {
   text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .sideBar {
+    display: none;
+  }
 }

@@ -1,21 +1,24 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = ({show}) => {
+const Navbar = ({ show }) => {
   return (
-    <div className={show ? 'sidenav active' : 'sidenav'}>
-      <ul>
-        <li>
-          <a href='/'>Home</a>
-        </li>
-        <li>
-          <a href='./pages/Products/ProductList/ProductList.js'>Productos</a>
-        </li>
-        <li>
-          <a href='#'>Tiendas</a>
-        </li>
-      </ul>
-    </div>
-  )
-}
+    <article>
+      <div className={show ? "sidenav active" : "sidenav"}>
+        <ul>
+          <li>
+            <Link to="/">Inicio</Link>
+          </li>
+          <li>
+            <Link to="/products">Productos</Link>
+          </li>
+          <li>
+            <Link to="*">Tiendas</Link>
+          </li>
+        </ul>
+      </div>
+    </article>
+  );
+};
 
-export default Navbar
+export default Navbar;
