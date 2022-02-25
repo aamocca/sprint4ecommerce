@@ -14,7 +14,7 @@ const MenuAdmin = () => {
         <section className="sideBar2">
           <div className="App">
             <header>
-              <GiHamburgerMenu onClick={() => setShowNav(showNav)} />
+              <GiHamburgerMenu onClick={() => setShowNav(!showNav)} />
             </header>
             <Navbar show={showNav} />
           </div>

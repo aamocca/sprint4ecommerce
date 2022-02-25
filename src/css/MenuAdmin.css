@@ -11,20 +11,25 @@ html {
   height: 100%;
 }
 .sideBar {
+  background: #222222;
   width: 50%;
   border: solid 2px black;
   bottom: 0;
   height: 100vh;
+  color: #fff;
 }
 .imgOlivia {
   margin-top: 76vh;
   padding-left: 40%;
+  color: #fff;
 }
 
 .mainArea {
   height: 100vh;
   width: 100%;
   border: solid 2px black;
+  color: #fff;
+  background: #222222;
 }
 .menus {
   text-decoration: none;
