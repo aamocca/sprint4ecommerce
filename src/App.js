@@ -12,7 +12,6 @@ function App() {
     // <div className="App">
     //   {/* <Header />
     //   <Navbar />
-    //   <Main /> */}
     //   <MenuAdmin />
     // </div>
     <>
@@ -20,7 +19,10 @@ function App() {
       <header>
         <GiHamburgerMenu onClick={() => setShowNav(!showNav)}/>
       </header>
+      <div className="mainsote">
       <Navbar show={showNav} />
+      <Main /> 
+      </div>
     </div>
     </>
   );

@@ -11,10 +11,7 @@ const Main = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<ProductView />} />
         <Route path="/products/new" element={<ProductsNew />} />
-        <Route
-          path="*"
-          element={<p>Error 404. No encontramos la pagina que buscas BB</p>}
-        />
+        <Route path="*" element={<p>Error 404. No encontramos la pagina que buscas BB</p>}/>
       </Routes>
     </>
   );

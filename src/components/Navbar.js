@@ -1,17 +1,20 @@
 import React from 'react'
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "../pages/Home/Home";
+import ProductList from "../pages/Products/ProductsList/ProductsList";
 
 const Navbar = ({show}) => {
   return (
-    <div className={show ? 'sidenav active' : 'sidenav'}>
+    <div className={!show ? 'sidenav active' : 'sidenav'}>
       <ul>
         <li>
-          <a href='/'>Home</a>
+          <Link to="/">Inicio</Link>
         </li>
         <li>
-          <a href='./pages/Products/ProductList/ProductList.js'>Productos</a>
+          <Link to="/products">Productos</Link>
         </li>
         <li>
-          <a href='#'>Tiendas</a>
+          <Link to="*">Tiendas</Link>
         </li>
       </ul>
     </div>
