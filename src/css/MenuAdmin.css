@@ -1,0 +1,42 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.menuAdmin {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.sideBar {
+  background: #222222;
+  width: 50%;
+  border: solid 2px black;
+  bottom: 0;
+  height: 100vh;
+  color: #fff;
+}
+.imgOlivia {
+  margin-top: 76vh;
+  padding-left: 40%;
+  color: #fff;
+}
+
+.mainArea {
+  height: 100vh;
+  width: 100%;
+  border: solid 2px black;
+  color: #fff;
+  background: #222222;
+}
+.menus {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .sideBar {
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+header {
+  display: none;
+}
+@media (max-width: 1024px) {
+  header {
+    display: flex;
+    color: #0cb093;
+    align-items: center;
+  }
+}
