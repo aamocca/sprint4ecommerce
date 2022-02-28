@@ -1,66 +1,62 @@
 .sideBar2 {
-  display: none;
+    display: none;
 }
+
 @media (max-width: 1024px) {
-  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-  html {
-    background: #222222;
-  }
-  .sideBar2 {
-    display: contents;
-  }
-  body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    color: #fff; /* color de hamburguesa */
-  }
-
-  header {
-    padding: 30px;
-    background: #222222;
-    height: 30px;
-  }
-
-  .sidenav {
-    width: 15%;
-    background: #222222;
-    position: absolute;
-    height: 95vh;
-    padding: 0 30px;
-    left: -350px;
-    transition: all 0.5s;
-  }
-
-  .sidenav.active {
-    left: 0;
-  }
-
-  ul {
-    padding: 0;
-  }
-
-  ul li {
-    list-style-type: none;
-    margin: 10px 0;
-  }
-
-  ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    display: block;
-    padding: 10px 15px;
-    border-radius: 6px;
-  }
-
-  ul li a:hover,
-  ul li a.active {
-    background: #595959;
-  }
-
-  header svg {
-    font-size: 40px;
-  }
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    html {
+        background: #222222;
+    }
+    .sideBar2 {
+        display: contents;
+    }
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+        background: #fff;
+        border: solid 1px black;
+        /* color de hamburguesa */
+    }
+    header {
+        padding: 30px;
+        background: #fff;
+        height: 30px;
+    }
+    .sidenav {
+        width: 15%;
+        background: #222222;
+        position: absolute;
+        height: 95vh;
+        padding: 0 30px;
+        left: -350px;
+        transition: all 0.5s;
+        color: black;
+    }
+    .sidenav.active {
+        left: 0;
+    }
+    ul {
+        padding: 0;
+    }
+    ul li {
+        list-style-type: none;
+        margin: 10px 0;
+    }
+    ul li a {
+        color: #000;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        padding: 10px 15px;
+        border-radius: 6px;
+    }
+    ul li a:hover,
+    ul li a.active {
+        background: #595959;
+    }
+    header svg {
+        font-size: 40px;
+    }
 }
