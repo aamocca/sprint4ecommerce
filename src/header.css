@@ -22,3 +22,7 @@ header {
 .BotonBusqueda {
   display: none;
 }
+
+header svg {
+  font-size: 40px;
+}
