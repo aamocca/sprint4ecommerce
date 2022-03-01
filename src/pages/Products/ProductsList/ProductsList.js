@@ -2,8 +2,10 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { render } from "@testing-library/react";
 import chevron from "../../../assets/img/chevronright.svg";
+import lupe from "../../../assets/img/magnify.svg";
 import ProductView from "../ProductView/ProductView";
 import { Link } from "react-router-dom";
+import "./ProductsList.css";
 
 const ProductList = () => {
   const [productos, setProductos] = useState([]);
@@ -35,28 +37,17 @@ const ProductList = () => {
         producto.title.includes(palabra.current.value)
       )
     );
-
-    // const nombre = palabra.current.value;
-    // console.log(nombre);
-    // const setProductos = productos.filter((producto) => producto.title);
-    // console.log(result);
-    // if (nombre === result) {
-    //   console.log(result);
-    // }
   }
-
-  // let data = await response.json();
-  // setSelectedProduct(data.title);
-  // console.log(data);
 
   return (
     <>
       <form>
-        <label className="BotonBusqueda" name="productname">
+      <label className="BotonBusqueda" name="productname">
           Buscar producto
         </label>
         <input
-          placeholder="Buscar Productos"
+          className="buscador"
+          placeholder="Buscar Productos..."
           type="text"
           ref={palabra}
           name="productoname"
@@ -78,26 +69,29 @@ const ProductList = () => {
           productos.map((producto, i) => {
             return (
               <Link to={`/products/${producto._id}`}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    padding: "30px",
-                    borderRadius: "12px",
-                    justifyContent: "space-evenly",
-                    border: "2px solid black",
-                  }}
-                >
-                  <img src={producto.image} width={"50px"} height={"50px"} />
-                  <p>{producto.title}</p>
+                <div className="productoInd">
+                  <section className="productImg">
+                  <img
+                    src={producto.image}
+                    width={"70px"}
+                    height={"70px"}
+                    />
+                  </section>
+                  <section className="productText" style={{ textDecoration: "none", color: "#000" }}>
+                  <p style={{ textDecoration: "none"}}>{producto.title}</p>
                   <p>{producto.id}</p>
                   <p>{producto.price}</p>
-                  <img
-                    src={chevron}
-                    onClick={() => {
-                      GetProduct(producto._id);
-                    }}
-                  />
+                  </section>
+                  <section className="chevronFlecha">
+                    <img
+                      src={chevron}
+                      width={"70px"}
+                      height={"70px"}
+                      onClick={() => {
+                       GetProduct(producto._id);
+                       }}
+                    />
+                  </section>
                 </div>
               </Link>
             );
@@ -107,26 +101,25 @@ const ProductList = () => {
             {productosFiltrados.map((producto, i) => {
               return (
                 <Link to={`/products/${producto._id}`}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      padding: "30px",
-                      borderRadius: "12px",
-                      justifyContent: "space-evenly",
-                      border: "2px solid black",
-                    }}
-                  >
-                    <img src={producto.image} width={"50px"} height={"50px"} />
+                  <div className="productoInd">
+                    <section className="productImg">
+                    <img src={producto.image} width={"70px"} height={"70px"} />
+                    </section>
+                    <section className="productText">
                     <p>{producto.title}</p>
                     <p>{producto.id}</p>
                     <p>{producto.price}</p>
+                    </section>
+                    <section className="chevronFlecha">
                     <img
                       src={chevron}
+                      width={"70px"}
+                      height={"70px"}
                       onClick={() => {
                         GetProduct(producto._id);
                       }}
-                    />
+                      />
+                      </section>
                   </div>
                 </Link>
               );
