@@ -51,6 +51,9 @@ const ProductList = () => {
 
   return (
     <>
+      <Link to="/products/new">
+        <button>Agregar</button>
+      </Link>
       <form>
         <label name="productname">Buscar producto</label>
         <input type="text" ref={palabra} name="productoname"></input>
