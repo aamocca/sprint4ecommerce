@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./ProductView.css";
+
 
 const ProductView = (propos) => {
   const formulario = useRef();
@@ -39,60 +41,64 @@ const ProductView = (propos) => {
 
   return (
     <>
+    <div className="detalleProducto">
       <Link to={`/products`}>
         <button>Volver</button>
       </Link>
 
-      <img src={vistaProducto.image} width={"50px"} height={"50px"}></img>
-      <h4>Información</h4>
+      
+      <h1>Información</h1>
       <form ref={formulario} style={{}}>
-        <label name="nombre">Nombre</label>
-        <input
+      <section className="npInformacion">
+        <label className="textos" name="nombre">Nombre</label>
+        <input className="inputProduct"
           type="text"
           name="nombre"
           placeholder={vistaProducto.title}
         ></input>
-        <label name="value">Valor</label>
-        <input
+        <label className="textos" name="value">Valor</label>
+        <input className="inputProduct"
           type="text"
           name="value"
           placeholder={vistaProducto.price}
         ></input>
-        <label name="stock">Stock</label>
-        <input
+        <label className="textos" name="stock">Stock</label>
+        <input className="inputStock"
           type="text"
           name="stock"
           placeholder={vistaProducto.stock}
         ></input>
-        <label name="descripcion">Descripción</label>
-        <input
+        <label className="textos" name="descripcion">Descripción</label>
+        <input className="inputDescripcion"
           type="text"
           name="descripcion"
           placeholder={vistaProducto.description}
         ></input>
-        <label name="shop">Tienda</label>
-        <input type="text" name="shop"></input>
-        <h3>Galería de imágenes</h3>
-        <label name="imagen">Nueva imagen</label>
-        <input type="text" name="imagen"></input>
-        <label name="imagenes">Imagenes actuales</label>
-        <input
+        <label className="textos" name="shop">Tienda</label>
+        <input className="inputProduct" type="text" name="shop"></input>
+        <h1>Galería de imágenes</h1>
+        <img src={vistaProducto.image} width={"50px"} height={"50px"}></img>
+        <label className="textos" name="imagen">Nueva imagen</label>
+        <input className="inputProduct" type="text" name="imagen"></input>
+        <label className="textos" name="imagenes">Imagenes actuales</label>
+        <input className="imagenProducto"
           type="text"
           name="img1"
           placeholder={vistaProducto.title}
         ></input>
-        <input
+        <input className="imagenProducto" 
           type="text"
           name="img2"
           placeholder={vistaProducto.title}
         ></input>
-        <input
+        <input className="imagenProducto"
           type="text"
           name="img3"
           placeholder={vistaProducto.title}
         ></input>
 
-        <button
+        <div>
+        <button className="buttons"
           onClick={(e) => {
             e.preventDefault();
             PostChanges();
@@ -100,8 +106,11 @@ const ProductView = (propos) => {
         >
           Cancelar
         </button>
-        <button>Guardar</button>
+        <button className="buttons">Guardar</button>
+        </div>
+      </section>
       </form>
+    </div>
     </>
   );
 };

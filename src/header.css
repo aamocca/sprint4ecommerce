@@ -3,6 +3,8 @@ header {
 }
 .headerv1 {
   display: flex;
+  background-color: #fff; 
+  color: #000;
 }
 .inpBuscador {
   display: flex;
