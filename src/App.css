@@ -1,6 +1,7 @@
 .sideBar2 {
   display: none;
 }
+
 @media (max-width: 1024px) {
   @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
   html {

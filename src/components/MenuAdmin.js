@@ -30,25 +30,22 @@ const MenuAdmin = () => {
           <h1>MiEcommerce</h1>
 
           <div className="menus SbInicio">
-            <Link to="/" style={{ textDecoration: "none", color: "#FFF" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
               Inicio
             </Link>
           </div>
           <div className="menus SbProductos">
             <Link
               to="/products"
-              style={{ textDecoration: "none", color: "#FFF" }}
+              style={{ textDecoration: "none", color: "#000" }}
             >
               Productos
             </Link>
           </div>
           <div className="menus SbTiendas">
-            <Link to="*" style={{ textDecoration: "none", color: "#FFF" }}>
+            <Link to="*" style={{ textDecoration: "none", color: "#000" }}>
               Tiendas
             </Link>
-          </div>
-          <div className="menus imgOlivia">
-            <p>La olivia</p>
           </div>
         </section>
         <section className="menus mainArea">
