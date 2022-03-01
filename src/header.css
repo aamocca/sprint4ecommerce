@@ -1,10 +1,24 @@
 header {
   display: none;
 }
+.headerv1 {
+  display: flex;
+  background-color: #fff; 
+  color: #000;
+}
+.inpBuscador {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 @media (max-width: 1024px) {
   header {
     display: flex;
     color: #0cb093;
     align-items: center;
   }
+}
+.BotonBusqueda {
+  display: none;
 }

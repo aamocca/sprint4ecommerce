@@ -16,6 +16,8 @@ const Main = () => {
           element={<p>Error 404. No encontramos la pagina que buscas BB</p>}
         />
       </Routes>
+      <Navbar />
+      <MenuAdmin />
     </>
   );
 };

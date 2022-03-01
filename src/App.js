@@ -6,12 +6,6 @@ import "./header.css";
 
 function App() {
   return (
-    // <div className="App">
-    //   {/* <Header />
-    //   <Navbar />
-    //   <Main /> */}
-    //   <MenuAdmin />
-    // </div>
     <>
       <MenuAdmin />
     </>

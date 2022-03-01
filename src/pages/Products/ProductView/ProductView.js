@@ -3,6 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import "./ProductView.css";
+
 const ProductView = (propos) => {
   const formulario = useRef();
   const id = useParams().id;
@@ -66,89 +68,132 @@ const ProductView = (propos) => {
   let img3 = useRef();
   return (
     <>
-      <button
-        onClick={(e) => {
-          DeleteItem(e);
-        }}
-      >
-        Eliminar
-      </button>
-      <Link to="/products">
-        <button>Volver</button>
-      </Link>
-
-      <img src={vistaProducto.image} width={"50px"} height={"50px"}></img>
-      <h4>Información</h4>
-      <form ref={formulario} style={{}}>
-        <label name="nombre">Nombre</label>
-        <input
-          required
-          type="text"
-          name="nombre"
-          ref={nombres}
-          placeholder={vistaProducto.title}
-          onChange={(e) => setNombre(e.target.value)}
-        ></input>
-        <label name="value">Valor</label>
-        <input
-          required
-          type="text"
-          name="value"
-          ref={valores}
-          placeholder={vistaProducto.price}
-          onChange={(e) => setValor(e.target.value)}
-        ></input>
-        <label name="stock">Stock</label>
-        <input
-          required
-          type="text"
-          name="stock"
-          ref={stock}
-          placeholder={vistaProducto.stock}
-        ></input>
-        <label name="descripcion">Descripción</label>
-        <input
-          required
-          type="text"
-          name="descripcion"
-          placeholder={vistaProducto.description}
-          ref={descripcion}
-        ></input>
-        <label name="shop">Tienda</label>
-        <input type="text" name="shop" ref={tienda}></input>
-        <h3>Galería de imágenes</h3>
-        <label name="imagen">Nueva imagen</label>
-        <input type="text" name="imagen" ref={newimg}></input>
-        <label name="imagenes">Imagenes actuales</label>
-        <input
-          type="text"
-          name="img1"
-          ref={img1}
-          placeholder={vistaProducto.title}
-        ></input>
-        <input
-          type="text"
-          name="img2"
-          ref={img2}
-          placeholder={vistaProducto.title}
-        ></input>
-        <input
-          type="text"
-          name="img3"
-          ref={img3}
-          placeholder={vistaProducto.title}
-        ></input>
-
-        <button>Cancelar</button>
+      <div className="detalleProducto">
         <button
           onClick={(e) => {
-            e.preventDefault();
-            HandleSubmit(e);
+            DeleteItem(e);
           }}
         >
-          Guardar
+          Eliminar
         </button>
-      </form>
+        <Link to="/products">
+          <button>Volver</button>
+        </Link>
+
+        <img src={vistaProducto.image} width={"50px"} height={"50px"}></img>
+        <h4>Información</h4>
+        <section className="npInformacion">
+          <form ref={formulario} style={{}}>
+            <label className="inputProduct" name="nombre">
+              Nombre
+            </label>
+            <input
+              className="inputProduct"
+              required
+              type="text"
+              name="nombre"
+              ref={nombres}
+              placeholder={vistaProducto.title}
+              onChange={(e) => setNombre(e.target.value)}
+            ></input>
+
+            <label className="textos" name="value">
+              Valor
+            </label>
+            <input
+              className="inputProduct"
+              required
+              type="text"
+              name="value"
+              ref={valores}
+              placeholder={vistaProducto.price}
+              onChange={(e) => setValor(e.target.value)}
+            ></input>
+
+            <label className="textos" name="stock">
+              Stock
+            </label>
+            <input
+              className="inputStock"
+              required
+              type="text"
+              name="stock"
+              ref={stock}
+              placeholder={vistaProducto.stock}
+            ></input>
+
+            <label className="textos" name="descripcion">
+              Descripción
+            </label>
+            <input
+              className="inputDescripcion"
+              required
+              type="text"
+              name="descripcion"
+              placeholder={vistaProducto.description}
+              ref={descripcion}
+            ></input>
+
+            <label className="textos" name="shop">
+              Tienda
+            </label>
+            <input
+              className="inputProduct"
+              type="text"
+              name="shop"
+              ref={tienda}
+            ></input>
+            <h1>Galería de imágenes</h1>
+            <img src={vistaProducto.image} width={"50px"} height={"50px"}></img>
+            <label className="textos" name="imagen">
+              Nueva imagen
+            </label>
+            <input
+              className="inputProduct"
+              type="text"
+              name="imagen"
+              ref={newimg}
+            ></input>
+            <label className="textos" name="imagenes">
+              Imagenes actuales
+            </label>
+            <input
+              className="imagenProducto"
+              type="text"
+              name="img1"
+              ref={img1}
+              placeholder={vistaProducto.title}
+            ></input>
+            <input
+              className="imagenProducto"
+              type="text"
+              name="img2"
+              ref={img2}
+              placeholder={vistaProducto.title}
+            ></input>
+            <input
+              className="imagenProducto"
+              type="text"
+              name="img3"
+              ref={img3}
+              placeholder={vistaProducto.title}
+            ></input>
+
+            <div>
+              <button className="buttons">Cancelar</button>
+              <button
+                className="buttons"
+                onClick={(e) => {
+                  e.preventDefault();
+                  HandleSubmit(e);
+                }}
+              >
+                Guardar
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
     </>
   );
 };
