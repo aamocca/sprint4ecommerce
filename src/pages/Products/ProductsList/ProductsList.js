@@ -41,6 +41,9 @@ const ProductList = () => {
 
   return (
     <>
+      <Link to="/products/new">
+        <button>Agregar</button>
+      </Link>
       <form>
       <label className="BotonBusqueda" name="productname">
           Buscar producto
