@@ -10,20 +10,21 @@ import Home from "../pages/Home/Home";
 import ProductList from "../pages/Products/ProductsList/ProductsList";
 import ProductView from "../pages/Products/ProductView/ProductView";
 import ProductsNew from "../pages/Products/ProductsNew/ProductsNew";
+import Header from "./Header";
 
 const MenuAdmin = () => {
   const [showNav, setShowNav] = useState(false);
   return (
     <>
       <div className="menuAdmin">
-        <section className="sideBar2">
+        {/* <section className="sideBar2">
           <div className="App">
             <header>
               <GiHamburgerMenu onClick={() => setShowNav(!showNav)} />
             </header>
             <Navbar show={showNav} />
           </div>
-        </section>
+        </section> */}
 
         <section className="sideBar">
           <h1>MiEcommerce</h1>
@@ -51,7 +52,9 @@ const MenuAdmin = () => {
           </div>
         </section>
         <section className="menus mainArea">
+          <Header />
           {/* Aqui va el header */}
+
           <Routes>
             <Route path="/products" element={<ProductList />} />
             <Route path="/" element={<Home />} />

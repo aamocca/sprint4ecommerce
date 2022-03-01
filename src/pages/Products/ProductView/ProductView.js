@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const ProductView = (propos) => {
   const formulario = useRef();
@@ -38,7 +39,10 @@ const ProductView = (propos) => {
 
   return (
     <>
-      <button>Volver</button>
+      <Link to={`/products`}>
+        <button>Volver</button>
+      </Link>
+
       <img src={vistaProducto.image} width={"50px"} height={"50px"}></img>
       <h4>Información</h4>
       <form ref={formulario} style={{}}>

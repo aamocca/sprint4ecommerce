@@ -52,9 +52,17 @@ const ProductList = () => {
   return (
     <>
       <form>
-        <label name="productname">Buscar producto</label>
-        <input type="text" ref={palabra} name="productoname"></input>
+        <label className="BotonBusqueda" name="productname">
+          Buscar producto
+        </label>
+        <input
+          placeholder="Buscar Productos"
+          type="text"
+          ref={palabra}
+          name="productoname"
+        ></input>
         <button
+          className="BotonBusqueda"
           onClick={(e) => {
             HandleSubmit(e);
           }}
