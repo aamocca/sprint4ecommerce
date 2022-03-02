@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../header.css";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -18,7 +19,9 @@ const Header = () => {
         </section>
         <section className="inpBuscador">
           <h1 className="tituloMain">Bienvenida Olivia</h1>
-          <button className="botonAgregar">Agregar</button>
+          <Link to="/products/new">
+            <button className="buttonNew">Agregar</button>
+          </Link>
         </section>
       </div>
     </>

@@ -1,13 +1,15 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import axios from "axios";
 import { render } from "@testing-library/react";
 import chevron from "../../../assets/img/chevronright.svg";
 import lupe from "../../../assets/img/magnify.svg";
 import ProductView from "../ProductView/ProductView";
+import { DarkMode, DarkModeContext } from "../../../context/DarkModeContext";
 import { Link } from "react-router-dom";
 import "./ProductsList.css";
 
 const ProductList = () => {
+  const { darkMode } = useContext(DarkMode);
   const [productos, setProductos] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [productosFiltrados, setProductosFiltrados] = useState([]);
@@ -41,9 +43,6 @@ const ProductList = () => {
 
   return (
     <>
-      <Link to="/products/new">
-        <button>Agregar</button>
-      </Link>
       <form>
       <label className="BotonBusqueda" name="productname">
           Buscar producto
@@ -54,7 +53,11 @@ const ProductList = () => {
           type="text"
           ref={palabra}
           name="productoname"
-        ></input>
+          src={lupe}
+        >
+          
+        </input>
+        
         <button
           className="BotonBusqueda"
           onClick={(e) => {
@@ -63,6 +66,7 @@ const ProductList = () => {
         >
           Buscar
         </button>
+        
       </form>
 
       {!selectedProduct ? (
@@ -71,8 +75,8 @@ const ProductList = () => {
         !isFiltering ? (
           productos.map((producto, i) => {
             return (
-              <Link to={`/products/${producto._id}`}>
-                <div className="productoInd">
+              <Link className="item" to={`/products/${producto._id}`}>
+                <div className={ darkMode ? "productoInd-BgColorDark" : "productoInd"}>
                   <section className="productImg">
                   <img
                     src={producto.image}
@@ -80,10 +84,10 @@ const ProductList = () => {
                     height={"70px"}
                     />
                   </section>
-                  <section className="productText" style={{ textDecoration: "none", color: "#000" }}>
-                  <p style={{ textDecoration: "none"}}>{producto.title}</p>
-                  <p>{producto.id}</p>
-                  <p>{producto.price}</p>
+                  <section className="productText" >
+                  <p className={darkMode ? "parrafo--BgColorDark":"parrafo"}>{producto.title}</p>
+                  <p className={darkMode ? "parrafo--BgColorDark":"parrafo"}>{producto.id}</p>
+                  <p className={darkMode ? "parrafo--BgColorDark":"parrafo"}>{producto.price}</p>
                   </section>
                   <section className="chevronFlecha">
                     <img
@@ -103,7 +107,7 @@ const ProductList = () => {
           <>
             {productosFiltrados.map((producto, i) => {
               return (
-                <Link to={`/products/${producto._id}`}>
+                <Link className="red" to={`/products/${producto._id}`}>
                   <div className="productoInd">
                     <section className="productImg">
                     <img src={producto.image} width={"70px"} height={"70px"} />

@@ -3,11 +3,15 @@
 import MenuAdmin from "./components/MenuAdmin";
 import "./App.css";
 import "./header.css";
+import {DarkModeContext} from "./context/DarkModeContext";
+
 
 function App() {
   return (
     <>
+    <DarkModeContext>
       <MenuAdmin />
+      </DarkModeContext>
     </>
   );
 }

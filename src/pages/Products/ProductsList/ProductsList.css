@@ -18,9 +18,21 @@
     margin: 22px 1px 5px 5px;
 }
 
+.productoInd-BgColorDark {
+    display: flex;
+    border: 2px solid white;
+    border-radius: 12px;
+    width: 95%;
+    height: 70px;
+    padding: 2%;
+    margin: 22px 1px 5px 5px;
+    color: #fff;
+}
+
 .productText {
     margin-left: 2%;
     width: 90%;
+    color: #fff;
 }
 
 .chevronFlecha {
@@ -28,4 +40,29 @@
     margin-left: 10%;
     align-self: flex-end;
     justify-self: flex-end;
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+.red {
+    color: red;
+}
+
+.parrafo {
+    color: red;
+    text-decoration: none;
+}
+
+.item>.productText>.parrafo--BgColorDark {
+    color: black;
+}
+
+.item {
+    color: white;
+}
+
+.item>.productText {
+    color: white;
 }

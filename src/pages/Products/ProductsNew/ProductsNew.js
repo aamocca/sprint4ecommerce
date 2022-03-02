@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import "./ProductsNew.css";
 
 const ProductsNew = () => {
   const HandleSubmit = async (e) => {
@@ -29,29 +31,34 @@ const ProductsNew = () => {
   return (
     <>
       <form>
-        <label name="nombre">Nombre</label>
-        <input type="text" name="nombre" ref={nombre}></input>
-        <label name="valor">Valor</label>
-        <input type="text" name="valor" ref={valor}></input>
-        <label name="stock">Stock</label>
-        <input type="text" name="stock" ref={stock}></input>
-        <label name="descripcion">Descripción</label>
-        <input type="text" name="descripcion" ref={descripcion}></input>
-        <label name="tienda">Tienda</label>
-        <input type="text" name="tienda" ref={tienda}></input>
-        <label name="id">id</label>
-        <input type="text" name="id" ref={id}></input>
+        <label className="textos" name="nombre">Nombre</label>
+        <input className="inputNew" type="text" name="nombre" ref={nombre}></input>
+        <label className="textos"  name="valor">Valor</label>
+        <input className="inputNew" type="text" name="valor" ref={valor}></input>
+        <label className="textos"  name="stock">Stock</label>
+        <input className="inputNew" type="text" name="stock" ref={stock}></input>
+        <label className="textos"  name="descripcion">Descripción</label>
+        <input className="inputNew" type="text" name="descripcion" ref={descripcion}></input>
+        <label className="textos" name="tienda">Tienda</label>
+        <input className="inputNew" type="text" name="tienda" ref={tienda}></input>
+        <label className="textos" name="id">Id</label>
+        <input className="inputNew" type="text" name="id" ref={id}></input>
         <h4>Galeria de imagenes</h4>
-        <label name="imagen">imagen</label>
-        <input type="text" name="imagen" ref={img}></input>
-        <button
+        <label className="textos" name="imagen">Imagen</label>
+        <input className="inputNew" type="text" name="imagen" ref={img}></input>
+      </form>
+      <div className="buttonsNew">
+        <Link to="/products">
+              <button className="enviar">Cancelar</button>
+              </Link>
+        <button className="enviar"
           onClick={(e) => {
             HandleSubmit(e);
           }}
         >
           Enviar
         </button>
-      </form>
+      </div>
     </>
   );
 };

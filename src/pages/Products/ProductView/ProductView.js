@@ -69,22 +69,32 @@ const ProductView = (propos) => {
   return (
     <>
       <div className="detalleProducto">
-        <button
-          onClick={(e) => {
-            DeleteItem(e);
-          }}
-        >
-          Eliminar
-        </button>
-        <Link to="/products">
-          <button>Volver</button>
-        </Link>
-
-        <img src={vistaProducto.image} width={"50px"} height={"50px"}></img>
+          <div>
+          <Link to="/products">
+            <button className="buttons">Volver</button>
+          </Link>
+          <button className="buttons"
+            onClick={(e) => {
+              DeleteItem(e);
+            }}
+            >
+            Eliminar
+          </button>
+        </div>
+        <div className="contProductDetalle">
+          <div className="imgProduct">
+            <img src={vistaProducto.image} width={"100px"} height={"100px"}></img>
+          </div>
+          <div className="infoProduct">
+            <p>{vistaProducto.title}</p>
+            <p>{vistaProducto.stock}</p>
+            <p>{vistaProducto.price}</p>
+          </div>
+        </div>
         <h4>Información</h4>
         <section className="npInformacion">
           <form ref={formulario} style={{}}>
-            <label className="inputProduct" name="nombre">
+            <label className="textos" name="nombre">
               Nombre
             </label>
             <input
@@ -93,7 +103,7 @@ const ProductView = (propos) => {
               type="text"
               name="nombre"
               ref={nombres}
-              placeholder={vistaProducto.title}
+              value={vistaProducto.title}
               onChange={(e) => setNombre(e.target.value)}
             ></input>
 
@@ -106,7 +116,7 @@ const ProductView = (propos) => {
               type="text"
               name="value"
               ref={valores}
-              placeholder={vistaProducto.price}
+              value={vistaProducto.price}
               onChange={(e) => setValor(e.target.value)}
             ></input>
 
@@ -119,7 +129,7 @@ const ProductView = (propos) => {
               type="text"
               name="stock"
               ref={stock}
-              placeholder={vistaProducto.stock}
+              value={vistaProducto.stock}
             ></input>
 
             <label className="textos" name="descripcion">
@@ -130,7 +140,7 @@ const ProductView = (propos) => {
               required
               type="text"
               name="descripcion"
-              placeholder={vistaProducto.description}
+              value={vistaProducto.description}
               ref={descripcion}
             ></input>
 
@@ -162,25 +172,27 @@ const ProductView = (propos) => {
               type="text"
               name="img1"
               ref={img1}
-              placeholder={vistaProducto.title}
+              value={vistaProducto.title}
             ></input>
             <input
               className="imagenProducto"
               type="text"
               name="img2"
               ref={img2}
-              placeholder={vistaProducto.title}
+              value={vistaProducto.title}
             ></input>
             <input
               className="imagenProducto"
               type="text"
               name="img3"
               ref={img3}
-              placeholder={vistaProducto.title}
+              value={vistaProducto.title}
             ></input>
 
             <div>
+              <Link to="/products">
               <button className="buttons">Cancelar</button>
+              </Link>
               <button
                 className="buttons"
                 onClick={(e) => {

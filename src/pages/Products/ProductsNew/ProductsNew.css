@@ -1,0 +1,35 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.textos {
+    font-size: 24px;
+}
+
+.enviar {
+    background-color: #f2e6e6;
+    width: 90px;
+    height: 40px;
+    border-radius: 24px;
+    border: solid #0cb093 2px;
+}
+
+.inputNew {
+    background-color: #f2e6e6;
+    width: 50%;
+    height: 40px;
+    border-radius: 24px;
+    border: solid #0cb093 2px;
+}
+
+.buttons {
+    margin-left: 25%;
+}
+
+.buttonsNew {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 3%;
+}

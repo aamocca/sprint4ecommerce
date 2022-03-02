@@ -1,63 +1,115 @@
 html {
-  width: 100%;
-  height: 100%;
-  font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
 }
 
 .menuAdmin {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  border: black solid 1px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border: black solid 1px;
+    color: #000;
+}
+
+.menuAdmin--BgColorDark {
+    background-color: #272727;
+    color: #fff;
+}
+
+.menus--BgColorDark {
+    color: #fff;
+}
+
+.navbar--link {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar--link--BgColorDark {
+    text-decoration: none;
+    color: #000;
 }
 
 .sideBar {
-  background: #0000;
-  width: 25%;
-  bottom: 0;
-  height: 100vh;
-  color: #0cb093;
-  padding: 15px;
-  border: black solid 1px;
+    width: 25%;
+    bottom: 0;
+    height: 100vh;
+    color: #0cb093;
+    padding: 15px;
+    border: black solid 1px;
+}
+
+.sideBar--BgColorDark {
+    background-color: #272727;
+    width: 25%;
+    bottom: 0;
+    height: 100vh;
+    color: #fff;
+    padding: 15px;
+    border: black solid 1px;
 }
 
 .imgOlivia {
-  margin-top: 76vh;
-  padding-left: 40%;
-  color: black;
+    margin-top: 76vh;
+    padding-left: 40%;
+    color: black;
 }
 
 .mainArea {
-  height: 100vh;
-  width: 100%;
-  border: solid 2px black;
-  color: #000;
-  background-color: #fff;
-  padding: 15px;
-  overflow: scroll;
+    height: 100vh;
+    width: 100%;
+    border: solid 2px black;
+    color: #272727;
+    background-color: #fff;
+    padding: 15px;
+    overflow: scroll;
+}
+
+.mainArea--BgColorDark {
+    height: 100vh;
+    width: 100%;
+    border: solid 2px white;
+    color: #fff !important;
+    background-color: #272727;
+    padding: 15px;
+    overflow: scroll;
 }
 
 .SbProductos,
 .SbTiendas,
 .SbInicio {
-  margin: 10px 0;
-  text-decoration-line: none;
-  font-size: 16px;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 6px;
+    margin: 10px 0;
+    text-decoration-line: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.SbProductos--BgColorDark,
+.SbTiendas--BgColorDark,
+.SbInicio--BgColorDark {
+    margin: 10px 0;
+    text-decoration-line: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #fff;
 }
 
 .SbProductos:hover,
 .SbTiendas:hover,
 .SbInicio:hover {
-  background: #595959;
+    background: #595959;
 }
 
 @media (max-width: 1024px) {
-  .sideBar {
-    display: none;
-  }
+    .sideBar {
+        display: none;
+    }
 }
