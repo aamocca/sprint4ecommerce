@@ -23,14 +23,28 @@ header {
     margin: 5px 15px 5px 5px;
 }
 
+article {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     header {
         display: flex;
-        color: #0cb093;
+        color: black;
         align-items: center;
+        margin: 10px;
+    }
+    article {
+        display: contents;
     }
 }
 
 .BotonBusqueda {
     display: none;
+    align-items: center;
+    border-radius: 15px;
+}
+
+header svg {
+    font-size: 40px;
 }

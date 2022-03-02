@@ -9,14 +9,11 @@
     background-color: black;
 }
 
-.homeOrden2 {
-    display: flex;
-    width: 100%;
-}
-
 .nombres {
     width: 70%;
     display: flex;
+    align-items: center;
+    font-size: 20px;
 }
 
 .botones {
@@ -38,4 +35,15 @@
     height: 50%;
     align-items: center;
     border-radius: 15px;
+}
+
+.objetos {
+    margin: 10px;
+}
+
+@media (max-width: 1024px) {
+    .botones {
+        height: 70%;
+        padding: 10px;
+    }
 }

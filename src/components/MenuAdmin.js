@@ -4,7 +4,6 @@ import { useContext, useState } from "react";
 import Navbar from "./Navbar";
 import "../App.css";
 import "../header.css";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import ProductList from "../pages/Products/ProductsList/ProductsList";
@@ -12,6 +11,9 @@ import ProductView from "../pages/Products/ProductView/ProductView";
 import ProductsNew from "../pages/Products/ProductsNew/ProductsNew";
 import Header from "./Header";
 import { DarkMode, DarkModeContext } from "../context/DarkModeContext";
+import home from "../img/home.svg";
+import caja from "../img/package-variant-closed.svg"
+import tienda from "../img/store.svg"
 
 const MenuAdmin = () => {
   const { darkMode, setDarkMode } = useContext(DarkMode);
@@ -48,6 +50,7 @@ const MenuAdmin = () => {
             </Link>
           </div>
           <div className={darkMode ? "SbProductos--BgColorDark" : "SbProductos"}>
+          <img className="imagen" src={caja} />
             <Link
               to="/products"
               style={{ textDecoration: "none", color: "#000" }}
@@ -56,6 +59,7 @@ const MenuAdmin = () => {
             </Link>
           </div>
           <div className="menus SbTiendas">
+          <img className="imagen" src={tienda} />
             <Link to="*" style={{ textDecoration: "none", color: "#000" }}>
               Tiendas
             </Link>

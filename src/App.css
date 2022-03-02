@@ -18,14 +18,10 @@
         color: #fff;
         /* color de hamburguesa */
     }
-    header {
-        padding: 30px;
-        background: #222222;
-        height: 30px;
-    }
     .sidenav {
         width: 15%;
-        background: #222222;
+        background: rgba(34, 34, 34, 0.9);
+        backdrop-filter: blur(2px);
         position: absolute;
         height: 95vh;
         padding: 0 30px;

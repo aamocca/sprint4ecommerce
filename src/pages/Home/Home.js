@@ -10,9 +10,9 @@ const Home = () => {
     <>
       <section className={ darkMode ? "homeOrden--BgColorDark"  : "homeOrden"}>
         <div className="nombres">
-          <img src={caja} />
-          <p>123</p>
-          <p>Productos</p>
+          <img className=" objetos"  src={caja} />
+          <p className="objetos" >123</p>
+          <p className="objetos" >Productos</p>
         </div>
         <div className="botones">
           <button className="btnLst">Ver Listado</button>
@@ -20,11 +20,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="homeOrden2">
+      <section className="homeOrden">
         <div className="nombres">
-          <img src={tienda} />
-          <p>10</p>
-          <p>Tiendas</p>
+          <img className="objetos" src={tienda} />
+          <p className="objetos" >10</p>
+          <p className="objetos" >Tiendas</p>
         </div>
         <div className="botones">
           <button className="btnLst">Ver Listado</button>
