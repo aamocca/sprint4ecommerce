@@ -17,6 +17,7 @@ const Header = () => {
           </div>
         </section>
         <section className="inpBuscador">
+        {/* <Navbar show={showNav} /> */}
           <h1 className="tituloMain">Bienvenida Olivia</h1>
           <button className="botonAgregar">Agregar</button>
         </section>

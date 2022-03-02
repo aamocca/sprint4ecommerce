@@ -11,16 +11,25 @@ header {
   justify-content: space-between;
   width: 100%;
 }
+article{
+  display: none;
+}
 
 @media (max-width: 1024px) {
-  header {
+  header { 
     display: flex;
-    color: #0cb093;
+    color: black;
     align-items: center;
+    margin: 10px;
+  }
+  article{
+    display: contents;
   }
 }
 .BotonBusqueda {
   display: none;
+  align-items: center;
+  border-radius: 15px;
 }
 
 header svg {

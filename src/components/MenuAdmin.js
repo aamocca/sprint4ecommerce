@@ -1,16 +1,17 @@
 import "../css/MenuAdmin.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "./Navbar";
 import "../App.css";
 import "../header.css";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import ProductList from "../pages/Products/ProductsList/ProductsList";
 import ProductView from "../pages/Products/ProductView/ProductView";
 import ProductsNew from "../pages/Products/ProductsNew/ProductsNew";
 import Header from "./Header";
+import home from "../img/home.svg";
+import caja from "../img/package-variant-closed.svg"
+import tienda from "../img/store.svg"
 
 const MenuAdmin = () => {
   const [showNav, setShowNav] = useState(false);
@@ -27,14 +28,18 @@ const MenuAdmin = () => {
         </section> */}
 
         <section className="sideBar">
+        
           <h1>MiEcommerce</h1>
 
           <div className="menus SbInicio">
+          <img className="imagen" src={home} />
             <Link to="/" style={{ textDecoration: "none", color: "#000" }}>
+            
               Inicio
             </Link>
           </div>
           <div className="menus SbProductos">
+          <img className="imagen" src={caja} />
             <Link
               to="/products"
               style={{ textDecoration: "none", color: "#000" }}
@@ -43,13 +48,14 @@ const MenuAdmin = () => {
             </Link>
           </div>
           <div className="menus SbTiendas">
+          <img className="imagen" src={tienda} />
             <Link to="*" style={{ textDecoration: "none", color: "#000" }}>
               Tiendas
             </Link>
           </div>
         </section>
-        <section className="menus mainArea">
-          <Header />
+        <section className="mainArea">
+        <Header />
           {/* Aqui va el header */}
 
           <Routes>

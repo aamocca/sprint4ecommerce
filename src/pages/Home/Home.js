@@ -17,7 +17,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="homeOrden2">
+      <section className="homeOrden">
         <div className="nombres">
           <img className="objetos" src={tienda} />
           <p className="objetos" >10</p>
